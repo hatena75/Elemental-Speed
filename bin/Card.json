@@ -1,0 +1,24 @@
+[
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 10,
+        "texture" : "f10"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 10,
+        "texture" : "f11"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 10,
+        "texture" : "f12"
+    }
+    
+]

@@ -1,0 +1,66 @@
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\bin\STG.exe.config
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\bin\STG.exe
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\bin\STG.pdb
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\STG04\STG04\STG04\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\bin\STG.exe.config
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\bin\Altseed_core.dll
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\bin\STG.exe
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\bin\STG.pdb
+C:\Users\PCuser\Downloads\48hGameJam2017\STG04\STG04\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\bin\STG.exe.config
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\bin\STG.exe
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\bin\STG.pdb
+C:\Users\PCuser\Desktop\48hGameJam2017\STG04\STG04\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\STG01\STG04\STG01\bin\STG.exe.config
+C:\Users\PCuser\Desktop\STG01\STG04\STG01\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\STG01\STG04\STG01\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku\bin\STG.exe.config
+C:\Users\PCuser\Desktop\zekkaku\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\zekkaku\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\zekkaku\bin\STG.exe
+C:\Users\PCuser\Desktop\zekkaku\bin\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\zekkaku - コピー\bin\STG.exe.config
+C:\Users\PCuser\Desktop\zekkaku - コピー\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\zekkaku - コピー\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku - コピー\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\zekkaku - コピー\bin\STG.exe
+C:\Users\PCuser\Desktop\zekkaku - コピー\bin\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku - コピー\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\zekkaku - sohosai\bin\STG.exe.config
+C:\Users\PCuser\Desktop\zekkaku - sohosai\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\zekkaku - sohosai\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku - sohosai\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\zekkaku - sohosai\bin\STG.exe
+C:\Users\PCuser\Desktop\zekkaku - sohosai\bin\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku - sohosai\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\zekkaku huyukomi\bin\STG.exe.config
+C:\Users\PCuser\Desktop\zekkaku huyukomi\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\zekkaku huyukomi\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku huyukomi\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\zekkaku huyukomi\bin\STG.exe
+C:\Users\PCuser\Desktop\zekkaku huyukomi\bin\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku huyukomi\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\bin\STG.exe.config
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\bin\STG.exe
+C:\Users\PCuser\Desktop\zekkaku huyukomi - コピー\bin\STG.pdb
+C:\Users\PCuser\Desktop\2018GameJam\bin\STG.exe.config
+C:\Users\PCuser\Desktop\2018GameJam\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\2018GameJam\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\2018GameJam\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\2018GameJam\bin\STG.exe
+C:\Users\PCuser\Desktop\2018GameJam\bin\STG.pdb
+C:\Users\PCuser\Desktop\2018GameJam\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache

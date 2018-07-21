@@ -1,0 +1,9 @@
+Up14
+left17
+light15
+down16
+
+trianle3
+square0
+circle2
+batu1
