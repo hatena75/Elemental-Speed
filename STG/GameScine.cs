@@ -61,7 +61,6 @@ namespace STG
         {
             Card.CardCreate();
 
-
             gameLayer = new asd.Layer2D();
 
             asd.Layer2D backgroundLayer = new asd.Layer2D();
@@ -166,22 +165,7 @@ namespace STG
 
         protected override void OnUpdated()
         {
-            /*
-            if (!isSceneChanging && !player.IsAlive)
-            {
-                asd.Engine.ChangeSceneWithTransition(new GameOverScene(), new asd.TransitionFade(1.0f, 1.0f));
-
-                if (playingBgmId.HasValue)
-                {
-                    asd.Engine.Sound.FadeOut(playingBgmId.Value, 1.0f);
-                    playingBgmId = null;
-                }
-
-                isSceneChanging = true;
-            }
-            */
-            //asd.Vector2DF moveVelocity = new asd.Vector2DF(1.0f, 0.0f);
-
+            //勝利が確定したときの処理
             if ((player1.win_state != false || player2.win_state != false) && iswindetermind == false) {
                 // フォントを生成する。
                 var font = asd.Engine.Graphics.CreateDynamicFont("", 35, new asd.Color(255, 0, 0, 255), 1, new asd.Color(255, 255, 255, 255));
@@ -211,64 +195,29 @@ namespace STG
                 iswindetermind = true;
             }
 
+            //勝利後の処理
+            if(iswindetermind == true && asd.Engine.Keyboard.GetKeyState(asd.Keys.Z) == asd.KeyState.Push && isSceneChanging == false)
+            {
+                asd.Engine.ChangeSceneWithTransition(new TitleScene(), new asd.TransitionFade(1.0f, 1.0f));
+
+                //iswindetermind = false;
+
+                isSceneChanging = true;
+            }
+
             if (count == 10)
             {
                 playingBgmId = asd.Engine.Sound.Play(bgm);
             }
 
+            //各カードにおいて場に出せるかどうか判定
             if(gameLayer.Objects.OfType<Card_field>().All(u => 
                     gameLayer.Objects.OfType<Card_play>().All(x => u.card_now.number != x.card_now.number + 1 && u.card_now.number != x.card_now.number - 1)) && count % 200 == 0)
                     {
                         card_left.card_now = Card.cardlist[randomnumber()];
 
                         card_right.card_now = Card.cardlist[randomnumber()];
-                    }
-            /*
-            if (
-                card_right.card_now.number != card_Z.card_now.number + 1 &&
-                card_right.card_now.number != card_X.card_now.number + 1 &&
-                card_right.card_now.number != card_C.card_now.number + 1 &&
-                card_right.card_now.number != card_V.card_now.number + 1 &&
-                card_left.card_now.number != card_Z.card_now.number + 1 &&
-                card_left.card_now.number != card_X.card_now.number + 1 &&
-                card_left.card_now.number != card_C.card_now.number + 1 &&
-                card_left.card_now.number != card_V.card_now.number + 1 &&
-                card_right.card_now.number != card_Z.card_now.number - 1 &&
-                card_right.card_now.number != card_X.card_now.number - 1 &&
-                card_right.card_now.number != card_C.card_now.number - 1 &&
-                card_right.card_now.number != card_V.card_now.number - 1 &&
-                card_left.card_now.number != card_Z.card_now.number - 1 &&
-                card_left.card_now.number != card_X.card_now.number - 1 &&
-                card_left.card_now.number != card_C.card_now.number - 1 &&
-                card_left.card_now.number != card_V.card_now.number - 1 &&
-
-                card_right.card_now.number != card_Q.card_now.number + 1 &&
-                card_right.card_now.number != card_W.card_now.number + 1 &&
-                card_right.card_now.number != card_E.card_now.number + 1 &&
-                card_right.card_now.number != card_R.card_now.number + 1 &&
-                card_left.card_now.number != card_Q.card_now.number + 1 &&
-                card_left.card_now.number != card_W.card_now.number + 1 &&
-                card_left.card_now.number != card_E.card_now.number + 1 &&
-                card_left.card_now.number != card_R.card_now.number + 1 &&
-                card_right.card_now.number != card_Q.card_now.number - 1 &&
-                card_right.card_now.number != card_W.card_now.number - 1 &&
-                card_right.card_now.number != card_E.card_now.number - 1 &&
-                card_right.card_now.number != card_R.card_now.number - 1 &&
-                card_left.card_now.number != card_Q.card_now.number - 1 &&
-                card_left.card_now.number != card_W.card_now.number - 1 &&
-                card_left.card_now.number != card_E.card_now.number - 1 &&
-                card_left.card_now.number != card_R.card_now.number - 1 &&
-
-                count % 200 == 0
-              )
-            {
-                
-                card_left.card_now = Card.cardlist[randomnumber()];
-                
-                card_right.card_now = Card.cardlist[randomnumber()];
-
-            }
-            */        
+                    }        
 
             count++;
         }
