@@ -52,7 +52,7 @@ namespace STG
         static Random rnd = new Random();
         public int randomnumber()
         {
-            return rnd.Next(Card.Number_of_card);
+            return rnd.Next(Card.cardlist.Count);
         }
 
 

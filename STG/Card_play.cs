@@ -60,7 +60,7 @@ namespace STG
                 {
                     //乱数生成
                     //次の手札
-                    card_now = Card.cardlist[rnd.Next(Card.Number_of_card)];
+                    card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
 
                     change_flag = false;
                 }
@@ -101,7 +101,7 @@ namespace STG
             {
                 //乱数生成
                 //次の手札
-                card_now = Card.cardlist[rnd.Next(Card.Number_of_card)];
+                card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
 
                 change_flag = false;
             }

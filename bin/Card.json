@@ -19,6 +19,69 @@
         "element": "fire",
         "effect" : 10,
         "texture" : "f12"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 10,
+        "texture" : "f13"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 10,
+        "texture" : "f14"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 10,
+        "texture" : "f15"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "water",
+        "effect" : 10,
+        "texture" : "w10"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "water",
+        "effect" : 10,
+        "texture" : "w11"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "water",
+        "effect" : 10,
+        "texture" : "w12"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "water",
+        "effect" : 10,
+        "texture" : "w13"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "water",
+        "effect" : 10,
+        "texture" : "w14"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "water",
+        "effect" : 10,
+        "texture" : "w15"
     }
     
 ]

@@ -64,3 +64,10 @@ C:\Users\PCuser\Desktop\2018GameJam\bin\Altseed_core.dll
 C:\Users\PCuser\Desktop\2018GameJam\bin\STG.exe
 C:\Users\PCuser\Desktop\2018GameJam\bin\STG.pdb
 C:\Users\PCuser\Desktop\2018GameJam\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\2018GameJamGit\bin\STG.exe.config
+C:\Users\PCuser\Desktop\2018GameJamGit\STG\obj\x86\Debug\STG.exe
+C:\Users\PCuser\Desktop\2018GameJamGit\STG\obj\x86\Debug\STG.pdb
+C:\Users\PCuser\Desktop\2018GameJamGit\STG\obj\x86\Debug\STG.csprojResolveAssemblyReference.cache
+C:\Users\PCuser\Desktop\2018GameJamGit\bin\Altseed_core.dll
+C:\Users\PCuser\Desktop\2018GameJamGit\bin\STG.exe
+C:\Users\PCuser\Desktop\2018GameJamGit\bin\STG.pdb
