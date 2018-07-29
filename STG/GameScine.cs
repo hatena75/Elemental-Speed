@@ -210,6 +210,8 @@ namespace STG
                 playingBgmId = asd.Engine.Sound.Play(bgm);
             }
 
+
+
             //各カードにおいて場に出せるかどうか判定
             if(gameLayer.Objects.OfType<Card_field>().All(u => 
                     gameLayer.Objects.OfType<Card_play>().All(x => u.card_now.number != x.card_now.number + 1 && u.card_now.number != x.card_now.number - 1)) && count % 200 == 0)
@@ -217,7 +219,24 @@ namespace STG
                         card_left.card_now = Card.cardlist[randomnumber()];
 
                         card_right.card_now = Card.cardlist[randomnumber()];
-                    }        
+                    }
+
+            //CPUが有効の時、カードを出せるか判定。
+            if (TitleScene.isCpuAssert == true && count % 53 == 0)
+            {
+                Card_play.isCpuDo = true;
+
+                foreach (Card_field field in gameLayer.Objects.OfType<Card_field>())
+                {
+                    foreach(Card_play play in gameLayer.Objects.OfType<Card_play>())
+                    {
+                        if (play.key > 4 && Card_play.isCpuDo == true)
+                        {
+                            play.playingcard_cpu(field);
+                        }
+                    }
+                }
+            }
 
             count++;
         }

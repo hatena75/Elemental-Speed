@@ -15,6 +15,8 @@ namespace STG
         public Card card_now;
 
         bool change_flag = false;
+        bool cpu_change_flag = false;
+        public static bool isCpuDo = false;
 
         static Random rnd = new Random();
 
@@ -106,6 +108,41 @@ namespace STG
                 change_flag = false;
             }
 
+        }
+
+        public void playingcard_cpu(Card_field field)
+        {
+
+            if ((field.card_now.number == card_now.number + 1 || field.card_now.number == card_now.number - 1) && cpu_change_flag == false)
+            {
+                //属性判定
+                if (((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water)
+                {
+                    effect_temp = card_now.effect;
+                    effect_temp = effect_temp * 2;
+                }
+                else
+                {
+                    effect_temp = card_now.effect;
+                }
+
+                //1Pか2Pか
+                ((GameScine)Layer.Scene).player1.HP = ((GameScine)Layer.Scene).player1.HP - effect_temp;
+                
+
+                field.card_now = card_now;
+                cpu_change_flag = true;
+            }
+
+            if (cpu_change_flag == true)
+            {
+                //乱数生成
+                //次の手札
+                card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
+
+                cpu_change_flag = false;
+                isCpuDo = false;
+            }
         }
 
         public Card_play(float x, float y, int Key, int RandomNumber)

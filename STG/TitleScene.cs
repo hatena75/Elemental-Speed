@@ -21,6 +21,7 @@ namespace STG
         }
 
         bool isTitleChanging = false;
+        public static bool isCpuAssert = false;
 
         protected override void OnUpdated()
         {
@@ -29,6 +30,15 @@ namespace STG
                 asd.Engine.ChangeSceneWithTransition(new GameScine(), new asd.TransitionFade(1.0f, 1.0f));
 
                 isTitleChanging = true;
+            }
+
+            if (asd.Engine.Keyboard.GetKeyState(asd.Keys.X) == asd.KeyState.Push && isTitleChanging == false)
+            {
+                asd.Engine.ChangeSceneWithTransition(new GameScine(), new asd.TransitionFade(1.0f, 1.0f));
+
+                isTitleChanging = true;
+
+                isCpuAssert = true;
             }
         }
     }
