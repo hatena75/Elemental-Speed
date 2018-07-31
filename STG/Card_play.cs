@@ -33,7 +33,10 @@ namespace STG
 
         private void playingcard_left()
         {
-            if (((GameScine)Layer.Scene).card_left.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water)
+            if (((GameScine)Layer.Scene).card_left.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water ||
+                ((GameScine)Layer.Scene).card_left.card_now.element == Card.elementname.water && card_now.element == Card.elementname.ground ||
+                ((GameScine)Layer.Scene).card_left.card_now.element == Card.elementname.wind && card_now.element == Card.elementname.fire ||
+                ((GameScine)Layer.Scene).card_left.card_now.element == Card.elementname.ground && card_now.element == Card.elementname.wind )
             {
                 effect_temp = card_now.effect;
                 effect_temp =effect_temp * 2;
@@ -75,7 +78,10 @@ namespace STG
             if ((((GameScine)Layer.Scene).card_right.card_now.number == card_now.number + 1 || ((GameScine)Layer.Scene).card_right.card_now.number == card_now.number - 1) && change_flag == false)
             {
                 //属性判定
-                if (((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water)
+                if (((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water ||
+                    ((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.water && card_now.element == Card.elementname.ground ||
+                    ((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.wind && card_now.element == Card.elementname.fire ||
+                    ((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.ground && card_now.element == Card.elementname.wind )
                 {
                     effect_temp = card_now.effect;
                     effect_temp = effect_temp * 2;
@@ -116,7 +122,10 @@ namespace STG
             if ((field.card_now.number == card_now.number + 1 || field.card_now.number == card_now.number - 1) && cpu_change_flag == false)
             {
                 //属性判定
-                if (((GameScine)Layer.Scene).card_right.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water)
+                if (field.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water ||
+                    field.card_now.element == Card.elementname.water && card_now.element == Card.elementname.ground ||
+                    field.card_now.element == Card.elementname.wind && card_now.element == Card.elementname.fire ||
+                    field.card_now.element == Card.elementname.ground && card_now.element == Card.elementname.wind )
                 {
                     effect_temp = card_now.effect;
                     effect_temp = effect_temp * 2;

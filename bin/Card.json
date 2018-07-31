@@ -82,6 +82,258 @@
         "element": "water",
         "effect" : 10,
         "texture" : "w15"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 10,
+        "texture" : "g10"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 10,
+        "texture" : "g11"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 10,
+        "texture" : "g12"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 10,
+        "texture" : "g13"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 10,
+        "texture" : "g14"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 10,
+        "texture" : "g15"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 10,
+        "texture" : "r10"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 10,
+        "texture" : "r11"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 10,
+        "texture" : "r12"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 10,
+        "texture" : "r13"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 10,
+        "texture" : "r14"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 10,
+        "texture" : "r15"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 20,
+        "texture" : "f20"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 20,
+        "texture" : "f21"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 20,
+        "texture" : "f22"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 20,
+        "texture" : "f23"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 20,
+        "texture" : "f24"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "fire",
+        "effect" : 20,
+        "texture" : "f25"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "water",
+        "effect" : 20,
+        "texture" : "w20"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "water",
+        "effect" : 20,
+        "texture" : "w21"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "water",
+        "effect" : 20,
+        "texture" : "w22"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "water",
+        "effect" : 20,
+        "texture" : "w23"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "water",
+        "effect" : 20,
+        "texture" : "w24"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "water",
+        "effect" : 20,
+        "texture" : "w25"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 20,
+        "texture" : "g20"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 20,
+        "texture" : "g21"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 20,
+        "texture" : "g22"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 20,
+        "texture" : "g23"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 20,
+        "texture" : "g24"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "wind",
+        "effect" : 20,
+        "texture" : "g25"
+    },
+    {
+        "number": 0,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 20,
+        "texture" : "r20"
+    },
+    {
+        "number": 1,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 20,
+        "texture" : "r21"
+    },
+    {
+        "number": 2,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 20,
+        "texture" : "r22"
+    },
+    {
+        "number": 3,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 20,
+        "texture" : "r23"
+    },
+    {
+        "number": 4,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 20,
+        "texture" : "r24"
+    },
+    {
+        "number": 5,
+        "type": "attack",
+        "element": "ground",
+        "effect" : 20,
+        "texture" : "r25"
     }
     
 ]

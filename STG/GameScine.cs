@@ -46,7 +46,7 @@ namespace STG
         asd.SoundSource bgm;
 
         //再生中のBGMを扱うためのID
-        int? playingBgmId;
+        int playingBgmId;
         
         //乱数を用意する
         static Random rnd = new Random();
@@ -70,20 +70,20 @@ namespace STG
             AddLayer(gameLayer);
             AddLayer(backgroundLayer);
 
-            Background bg = new Background(new asd.Vector2DF(0.0f, 0.0f), "Resources/Bg.png");
+            Background bg = new Background(new asd.Vector2DF(0.0f, 0.0f), "Resources/Cyber.png");
 
             backgroundLayer.AddObject(bg);
 
             //player = new Player();
 
-            card_left = new Card_field(220,470, randomnumber());
+            card_left = new Card_field(220,500, randomnumber());
 
-            card_right = new Card_field(420,470, randomnumber());
+            card_right = new Card_field(420,500, randomnumber());
 
-            card_Z = new Card_play(120, 700, 1,randomnumber());
-            card_X = new Card_play(270, 700, 2, randomnumber());
-            card_C = new Card_play(420, 700, 3, randomnumber());
-            card_V = new Card_play(570, 700, 4, randomnumber());
+            card_Z = new Card_play(100, 730, 1,randomnumber());
+            card_X = new Card_play(250, 730, 2, randomnumber());
+            card_C = new Card_play(400, 730, 3, randomnumber());
+            card_V = new Card_play(550, 730, 4, randomnumber());
 
             card_Q = new Card_play(320, 0, 5, randomnumber());
             card_W = new Card_play(190, 200, 6, randomnumber());
@@ -126,7 +126,7 @@ namespace STG
             player1.obj.Font = font;
 
             // 描画位置を指定する。
-            player1.obj.Position = new asd.Vector2DF(350, 810);
+            player1.obj.Position = new asd.Vector2DF(385, 840);
 
             // 描画する文字列を指定する。
             player1.obj.Text = "Player1 : " + player1.HP;
@@ -157,7 +157,7 @@ namespace STG
             bgm.IsLoopingMode = true;
 
             //IDはnull(BGMは流れてない）
-            playingBgmId = null;
+            playingBgmId = 0; //null代入
             
         }
 
@@ -165,10 +165,15 @@ namespace STG
 
         protected override void OnUpdated()
         {
+            if (count == 10)
+            {
+                playingBgmId = asd.Engine.Sound.Play(bgm);
+            }
+
             //勝利が確定したときの処理
             if ((player1.win_state != false || player2.win_state != false) && iswindetermind == false) {
                 // フォントを生成する。
-                var font = asd.Engine.Graphics.CreateDynamicFont("", 35, new asd.Color(255, 0, 0, 255), 1, new asd.Color(255, 255, 255, 255));
+                var font = asd.Engine.Graphics.CreateDynamicFont("", 40, new asd.Color(255, 0, 0, 255), 1, new asd.Color(255, 255, 255, 255));
 
                 // 文字描画オブジェクトを生成する。
                 var obj = new asd.TextObject2D();
@@ -196,19 +201,18 @@ namespace STG
             }
 
             //勝利後の処理
-            if(iswindetermind == true && asd.Engine.Keyboard.GetKeyState(asd.Keys.Z) == asd.KeyState.Push && isSceneChanging == false)
+            if(iswindetermind == true && (asd.Engine.Keyboard.GetKeyState(asd.Keys.Z) == asd.KeyState.Push || asd.Engine.Keyboard.GetKeyState(asd.Keys.X) == asd.KeyState.Push) && isSceneChanging == false)
             {
                 asd.Engine.ChangeSceneWithTransition(new TitleScene(), new asd.TransitionFade(1.0f, 1.0f));
 
                 //iswindetermind = false;
 
+                asd.Engine.Sound.FadeOut(playingBgmId,1.0f);
+
                 isSceneChanging = true;
             }
 
-            if (count == 10)
-            {
-                playingBgmId = asd.Engine.Sound.Play(bgm);
-            }
+            
 
 
 

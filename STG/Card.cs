@@ -42,7 +42,7 @@ namespace STG
         {
             fire = 1,
             water,
-            rock,
+            ground,
             wind
         }
 
