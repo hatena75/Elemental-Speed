@@ -36,6 +36,16 @@ namespace STG
         private asd.SoundSource drawSound3;
         private asd.SoundSource drawSound4;
 
+        //おてつき画像
+        // 画像を読み込む。
+        asd.Texture2D otetsuki = asd.Engine.Graphics.CreateTexture2D("Resources/otetsuki.png");
+
+        // 画像描画オブジェクトのインスタンスを生成する。
+        //asd.TextureObject2D obj1 = new asd.TextureObject2D();
+        asd.TextureObject2D obj2 = new asd.TextureObject2D();
+
+
+
         private void playsound()
         {
             int x = rnd.Next(0, 3);
@@ -74,8 +84,9 @@ namespace STG
                 effect_temp = card_now.effect;
             }
 
+
             if ((((GameScine)Layer.Scene).card_left.card_now.number == card_now.number + 1 || ((GameScine)Layer.Scene).card_left.card_now.number == card_now.number - 1) && change_flag == false)
-                {
+            {
                     if(key <= 4)
                     {
                         ((GameScine)Layer.Scene).player2.HP = ((GameScine)Layer.Scene).player2.HP - effect_temp;
@@ -87,16 +98,28 @@ namespace STG
 
                     ((GameScine)Layer.Scene).card_left.card_now = card_now;
                     change_flag = true;
-                }
+            }
+            else
+            {
+                //おてつき処理
+                if (key <= 4)
+                    {
+                        ((GameScine)Layer.Scene).player1.otetsuki_count = 100;
+                    }
+                    else
+                    {
+                        ((GameScine)Layer.Scene).player2.otetsuki_count = 100;
+                    }
+            }
 
-                if (change_flag == true)
-                {
+            if (change_flag == true)
+            {
                     //乱数生成
                     //次の手札
                     card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
                     playsound();
                     change_flag = false;
-                }
+            }
             
         }
 
@@ -131,6 +154,18 @@ namespace STG
 
                 ((GameScine)Layer.Scene).card_right.card_now = card_now;
                 change_flag = true;
+            }
+            else
+            {
+                //おてつき処理
+                if (key <= 4)
+                {
+                    ((GameScine)Layer.Scene).player1.otetsuki_count = 50;
+                }
+                else
+                {
+                    ((GameScine)Layer.Scene).player2.otetsuki_count = 50;
+                }
             }
 
             if (change_flag == true)
@@ -213,25 +248,25 @@ namespace STG
             switch (key)
             {
                 case 1:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.A) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.A) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_left();
                     }
 
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.J) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.J) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_right();
                     }
                     break;
 
                 case 2:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.S) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.S) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_left();
 
                     }
 
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.K) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.K) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_right();
 
@@ -239,13 +274,13 @@ namespace STG
                     break;
 
                 case 3:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.D) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.D) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_left();
 
                     }
 
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.L) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.L) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_right();
 
@@ -253,13 +288,13 @@ namespace STG
                     break;
 
                 case 4:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.F) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.F) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_left();
 
                     }
 
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Semicolon) == asd.KeyState.Push)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Semicolon) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
                         playingcard_right();
 
@@ -267,25 +302,25 @@ namespace STG
                     break;
 
                 case 5:
-                    if (joystickCheck(14))
+                    if (joystickCheck(14) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_left();
                     }
 
-                    if (joystickCheck(3))
+                    if (joystickCheck(3) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_right();
                     }
                     break;
 
                 case 6:
-                    if (joystickCheck(17))
+                    if (joystickCheck(17) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_left();
 
                     }
 
-                    if (joystickCheck(0))
+                    if (joystickCheck(0) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_right();
 
@@ -293,13 +328,13 @@ namespace STG
                     break;
 
                 case 7:
-                    if (joystickCheck(15))
+                    if (joystickCheck(15) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_left();
 
                     }
 
-                    if (joystickCheck(2))
+                    if (joystickCheck(2) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_right();
 
@@ -307,13 +342,13 @@ namespace STG
                     break;
 
                 case 8:
-                    if (joystickCheck(16))
+                    if (joystickCheck(16) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_left();
 
                     }
 
-                    if (joystickCheck(1))
+                    if (joystickCheck(1) && ((GameScine)Layer.Scene).player2.otetsuki_count == 0 && TitleScene.isCpuAssert == false)
                     {
                         playingcard_right();
 
@@ -324,8 +359,23 @@ namespace STG
                     break;
             }
 
-            Texture = card_now.Texture;
+            //おてつき画像表示
+            if (((GameScine)Layer.Scene).player1.otetsuki_count > 0 && ((GameScine)Layer.Scene).player1.otetsuki_flag == false)
+            {
+                asd.Engine.AddObject2D(new Otetsuki(otetsuki, new asd.Vector2DF(250, 655)));
 
+                ((GameScine)Layer.Scene).player1.otetsuki_flag = true;
+            }
+
+            if (((GameScine)Layer.Scene).player2.otetsuki_count > 0 && ((GameScine)Layer.Scene).player2.otetsuki_flag == false)
+            {
+                asd.Engine.AddObject2D(new Otetsuki(otetsuki, new asd.Vector2DF(245, 120)));
+
+                ((GameScine)Layer.Scene).player2.otetsuki_flag = true;
+            }
+
+
+            Texture = card_now.Texture;
             
 
             asd.Vector2DF position = Position;

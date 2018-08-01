@@ -89,6 +89,7 @@
     <Compile Include="GameOverScene.cs" />
     <Compile Include="GameScine.cs" />
     <Compile Include="Opponent.cs" />
+    <Compile Include="Otetsuki.cs" />
     <Compile Include="PenetrateBullet.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Etc\Program.cs" />

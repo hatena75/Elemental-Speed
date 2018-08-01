@@ -90,8 +90,8 @@ namespace STG
             card_E = new Card_play(450, 200, 7, randomnumber());
             card_R = new Card_play(320, 280, 8, randomnumber());
 
-            player1 = new CardPlayer(200,"Player1");
-            player2 = new CardPlayer(200,"Player2");
+            player1 = new CardPlayer(300,"Player1");
+            player2 = new CardPlayer(300,"Player2");
 
 
             //gameLayer.AddObject(player);
@@ -158,6 +158,7 @@ namespace STG
 
             //IDはnull(BGMは流れてない）
             playingBgmId = 0; //null代入
+
             
         }
 
@@ -168,6 +169,7 @@ namespace STG
             if (count == 10)
             {
                 playingBgmId = asd.Engine.Sound.Play(bgm);
+                asd.Engine.Sound.SetVolume(playingBgmId, 0.7f);
             }
 
             //勝利が確定したときの処理

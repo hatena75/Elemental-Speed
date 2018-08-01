@@ -16,6 +16,10 @@ namespace STG
 
         public bool win_state = false;
 
+        public bool otetsuki_flag = false;
+
+        public int otetsuki_count = 0;
+
         public CardPlayer(int hp, string Name)
         {
             HP = hp;
@@ -29,6 +33,11 @@ namespace STG
                 //相手の勝利を告げる文字を表示
                 win_state = true;
               
+            }
+
+            if(otetsuki_count > 0)
+            {
+                otetsuki_count--;
             }
 
             //各PlayerのHPの表示を更新
