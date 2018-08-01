@@ -31,6 +31,34 @@ namespace STG
         //ボムを発動したときの効果音
         private asd.SoundSource bombSound;
 
+        private asd.SoundSource drawSound1;
+        private asd.SoundSource drawSound2;
+        private asd.SoundSource drawSound3;
+        private asd.SoundSource drawSound4;
+
+        private void playsound()
+        {
+            int x = rnd.Next(0, 3);
+
+            switch (x)
+            {
+                case 0:
+                    asd.Engine.Sound.Play(drawSound1);
+                    break;
+                case 1:
+                    asd.Engine.Sound.Play(drawSound2);
+                    break;
+                case 2:
+                    asd.Engine.Sound.Play(drawSound3);
+                    break;
+                case 3:
+                    asd.Engine.Sound.Play(drawSound4);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void playingcard_left()
         {
             if (((GameScine)Layer.Scene).card_left.card_now.element == Card.elementname.fire && card_now.element == Card.elementname.water ||
@@ -66,7 +94,7 @@ namespace STG
                     //乱数生成
                     //次の手札
                     card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
-
+                    playsound();
                     change_flag = false;
                 }
             
@@ -110,7 +138,7 @@ namespace STG
                 //乱数生成
                 //次の手札
                 card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
-
+                playsound();
                 change_flag = false;
             }
 
@@ -148,7 +176,7 @@ namespace STG
                 //乱数生成
                 //次の手札
                 card_now = Card.cardlist[rnd.Next(Card.cardlist.Count)];
-
+                playsound();
                 cpu_change_flag = false;
                 isCpuDo = false;
             }
@@ -173,6 +201,11 @@ namespace STG
 
             //ボム発動の効果音を読み込む
             bombSound = asd.Engine.Sound.CreateSoundSource("Resources/Bomb.wav", true);
+
+            drawSound1 = asd.Engine.Sound.CreateSoundSource("Resources/draw1.wav", true);
+            drawSound2 = asd.Engine.Sound.CreateSoundSource("Resources/draw2.wav", true);
+            drawSound3 = asd.Engine.Sound.CreateSoundSource("Resources/draw3.wav", true);
+            drawSound4 = asd.Engine.Sound.CreateSoundSource("Resources/draw4.wav", true);
         }
 
         protected override void OnUpdate()
