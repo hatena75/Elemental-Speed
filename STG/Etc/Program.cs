@@ -13,7 +13,7 @@ namespace STG
 		static void Main(string[] args)
 		{
 			// Altseedを初期化する。
-			asd.Engine.Initialize("Speed", 650, 900, new asd.EngineOption());
+			asd.Engine.Initialize("ElementalSpeed", 650, 900, new asd.EngineOption());
 
             TitleScene scene = new TitleScene();
 
