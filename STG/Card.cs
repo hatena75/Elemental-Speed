@@ -16,16 +16,6 @@ namespace STG
         public string texture; //画像名
 
         public static List<Card> cardlist = new List<Card>();
-        
-        /*
-        private static int number_of_card = 0;
-
-        public static int Number_of_card
-        {
-            get { return number_of_card; }
-            private set { number_of_card = value; }
-        }
-        */
 
         Card()
         {

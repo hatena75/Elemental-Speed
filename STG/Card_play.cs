@@ -248,56 +248,63 @@ namespace STG
             switch (key)
             {
                 case 1:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.A) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Z) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
-                        playingcard_left();
+                        if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Right) == asd.KeyState.Hold)
+                        {
+                            playingcard_right();
+                        }
+                        else
+                        {
+                            playingcard_left();
+                        }
                     }
-
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.J) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
-                    {
-                        playingcard_right();
-                    }
+                    
                     break;
 
                 case 2:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.S) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
+                    
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.X) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
-                        playingcard_left();
-
-                    }
-
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.K) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
-                    {
-                        playingcard_right();
-
+                        if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Right) == asd.KeyState.Hold)
+                        {
+                            playingcard_right();
+                        }
+                        else
+                        {
+                            playingcard_left();
+                        }
                     }
                     break;
 
                 case 3:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.D) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
+                    
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.C) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
-                        playingcard_left();
-
+                        if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Left) == asd.KeyState.Hold)
+                        {
+                            playingcard_left();
+                        }
+                        else
+                        {
+                            playingcard_right();
+                        }
                     }
 
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.L) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
-                    {
-                        playingcard_right();
-
-                    }
                     break;
 
                 case 4:
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.F) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
+                    
+                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.V) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
                     {
-                        playingcard_left();
-
-                    }
-
-                    if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Semicolon) == asd.KeyState.Push && ((GameScine)Layer.Scene).player1.otetsuki_count == 0)
-                    {
-                        playingcard_right();
-
+                        if (asd.Engine.Keyboard.GetKeyState(asd.Keys.Left) == asd.KeyState.Hold)
+                        {
+                            playingcard_left();
+                        }
+                        else
+                        {
+                            playingcard_right();
+                        }
                     }
                     break;
 
@@ -311,6 +318,7 @@ namespace STG
                     {
                         playingcard_right();
                     }
+                    
                     break;
 
                 case 6:
