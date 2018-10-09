@@ -30,6 +30,8 @@ namespace STG
                 asd.Engine.ChangeSceneWithTransition(new GameScine(), new asd.TransitionFade(1.0f, 1.0f));
 
                 isTitleChanging = true;
+
+                isCpuAssert = false;
             }
 
             if (asd.Engine.Keyboard.GetKeyState(asd.Keys.X) == asd.KeyState.Push && isTitleChanging == false)
